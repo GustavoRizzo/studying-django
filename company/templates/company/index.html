@@ -5,11 +5,12 @@
     </head>
     <body>
         <header>
-            <h1>Listagem de Empresas</h1>
+            <h1 class="title_page">Listagem de Empresas</h1>
             <h2>Selecione uma para ver os membros</h2>
         </header>
-        {% if company_list %}            
-            <div class="section_cards">
+
+        <div class="section_cards">
+            {% if company_list %}
                 <ul class="cards">
                 {% for company in company_list %}
                     <li>
@@ -24,9 +25,10 @@
                     </li>
                 {% endfor %}
                 </ul>
-            </div>
-        {% else %}
-            <h2 class="fail_text">Nenhuma empresa foi encontrada</h2>
-        {% endif %}
+            {% else %}
+                <h2 class="fail_text">Nenhuma empresa foi encontrada</h2>
+            {% endif %}
+        </div>
+
     </body>
 </html>

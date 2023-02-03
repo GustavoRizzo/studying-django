@@ -15,6 +15,10 @@ header {
   margin: 40px min(10%,50px);
 }
 
+.title_page {
+    font-size: 34px;
+}
+
 .section_cards {
   display: grid;
   justify-items: center;
