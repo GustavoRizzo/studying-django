@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'playground',
     'debug_toolbar',
     'polls.apps.PollsConfig',
+    'company.apps.CompanyConfig',
 ]
 
 MIDDLEWARE = [
