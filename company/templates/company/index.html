@@ -5,8 +5,8 @@
     </head>
     <body>
         <header>
-            <h1>LISTAGEM DE COMPANHIAS</h1>
-            <h2>Selecione uma para ver os membros dela</h2>
+            <h1>Listagem de Empresas</h1>
+            <h2>Selecione uma para ver os membros</h2>
         </header>
         {% if company_list %}            
             <div class="section_cards">
@@ -16,7 +16,9 @@
                     <a class="nostyle" href="{% url 'company:detail' company.id %}">
                         <div class="card">
                             <img class="card_img" src="{{ company.url_img }}" alt="logo">
-                            <h2 class="card_title">{{ company.name }}</h2>  
+                            <div class="card_textarea">
+                                <h2 class="card_title">{{ company.name }}</h2>
+                            </div>                              
                         </div>
                     </a>
                     </li>
@@ -24,7 +26,7 @@
                 </ul>
             </div>
         {% else %}
-            <h2>Company Not Found.</h2>
+            <h2 class="fail_text">Nenhuma empresa foi encontrada</h2>
         {% endif %}
     </body>
 </html>

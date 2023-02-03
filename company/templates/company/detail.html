@@ -1,10 +1,32 @@
 <html>
+    <head>
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'company/style.css' %}">
+    </head>
     <body>
-        <h1>{{ company.name }}</h1>
-        <ul>
-        {% for member in company.member_set.all %}
-            <li>{{ member.name }}</li>
-        {% endfor %}
-        </ul>
+        <header>
+            <h1>{{ company.name }}</h1>
+            <h2>Esses são so membros dessa empresa </h2>
+        </header>
+
+        <div class="section_cards">
+            {% if  company.member_set.all %}
+                <ul class="cards">
+                {% for member in company.member_set.all %}
+                    <li>
+                        <div class="card">
+                            <!--<img class="card_img" src="{{ member.url_img }}" alt="perfil">-->
+                            <div class="card_textarea">
+                                <h2 class="card_title">{{ member.name }}</h2>
+                                <p class="card_date">{{ member.hiring_date }}</p>
+                            </div>                              
+                        </div>
+                    </li>
+                {% endfor %}
+                </ul>            
+            {% else %}
+                <h2 class="fail_text">Nenhum membros foi encontrado.</h2>
+            {% endif %}
+        </div>
     </body>
 </html>
