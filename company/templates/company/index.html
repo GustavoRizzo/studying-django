@@ -1,0 +1,13 @@
+<html>
+    <body>
+        {% if company_list %}
+            <ul>
+            {% for company in company_list %}
+                <li><a href="{% url 'company:detail' company.id %}">{{ company.name }}</a></li>
+            {% endfor %}
+            </ul>
+        {% else %}
+            <p>Company Not Found.</p>
+        {% endif %}
+    </body>
+</html>

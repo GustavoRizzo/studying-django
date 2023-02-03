@@ -1,0 +1,10 @@
+<html>
+    <body>
+        <h1>{{ company.name }}</h1>
+        <ul>
+        {% for member in company.member_set.all %}
+            <li>{{ member.name }}</li>
+        {% endfor %}
+        </ul>
+    </body>
+</html>
