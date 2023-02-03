@@ -1,0 +1,73 @@
+
+:root {
+    --cor-fundo: #202530;
+    --cor-borda-card: white;
+    --cor-texto-default: white;
+    --font-family-default: "Roboto Mono", Sans-serif;
+  }
+  
+  body {
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto-default);
+    font-family: var(--font-family-default);
+  }
+
+  header {
+    margin: 40px min(10%,50px);
+  }
+  
+  .section_cards {
+    display: grid;
+    justify-items: center;
+  }
+  
+  .cards {
+    width: min(90%, 2000px);
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+  }
+  
+  .cards li {
+    display: block;
+  }
+  .cards {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .card {
+    display: flex;
+    height: 100px;
+    /*border: 2px white solid;*/
+    box-shadow: rgba(200, 200, 200, 0.55) 5px 5px 25px;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .card:hover {
+    box-shadow: rgba(200, 200, 200, 0.95) 5px 5px 25px;
+    scale: 1.08;
+  }
+  
+  .card_img {
+    aspect-ratio: 1/1;
+    background-color: white;
+  }
+  
+  .card_title {
+    margin: auto 1em;
+    color: var(--cor-texto-default);
+    text-decoration: none;
+  }
+  
+  a.nostyle:link {
+    text-decoration: inherit;
+    color: inherit;
+  }
+  
+  a.nostyle:visited {
+    text-decoration: inherit;
+    color: inherit;
+  }
+  

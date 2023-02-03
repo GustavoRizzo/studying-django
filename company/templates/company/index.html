@@ -1,13 +1,30 @@
 <html>
+    <head>
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'company/style.css' %}">
+    </head>
     <body>
-        {% if company_list %}
-            <ul>
-            {% for company in company_list %}
-                <li><a href="{% url 'company:detail' company.id %}">{{ company.name }}</a></li>
-            {% endfor %}
-            </ul>
+        <header>
+            <h1>LISTAGEM DE COMPANHIAS</h1>
+            <h2>Selecione uma para ver os membros dela</h2>
+        </header>
+        {% if company_list %}            
+            <div class="section_cards">
+                <ul class="cards">
+                {% for company in company_list %}
+                    <li>
+                    <a class="nostyle" href="{% url 'company:detail' company.id %}">
+                        <div class="card">
+                            <img class="card_img" src="{{ company.url_img }}" alt="logo">
+                            <h2 class="card_title">{{ company.name }}</h2>  
+                        </div>
+                    </a>
+                    </li>
+                {% endfor %}
+                </ul>
+            </div>
         {% else %}
-            <p>Company Not Found.</p>
+            <h2>Company Not Found.</h2>
         {% endif %}
     </body>
 </html>
