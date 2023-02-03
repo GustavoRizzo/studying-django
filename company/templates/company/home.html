@@ -1,0 +1,33 @@
+<html>
+    <head>
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'company/style.css' %}">
+    </head>
+    <body>
+
+        <section class="about">
+            <h1 class="titulo_projeto">
+              Projeto de Estudo da Ferramenta Django
+            </h1>
+            <img class="about_img_perfil" src="https://media.licdn.com/dms/image/C4E03AQGukijs0YFRgA/profile-displayphoto-shrink_800_800/0/1557612532060?e=1680739200&v=beta&t=F8Cfc8YyYSDV3a7rPQS9yT1YwcydIQdrJQ3PLF4RjPU" alt="perfil">
+            <h4>Desenvolvidor por</h4>
+            <h2>Gustavo Rizzo S. M. de Albuquerque</h2>
+            <div class="list_contato">
+              <a href="https://www.linkedin.com/in/gustavo-albuquerque/">
+                <img class="linkedin" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/640px-LinkedIn_logo_initials.png" alt="linkedin">
+              </a>
+              <a href="https://github.com/GustavoRizzo">
+                <img class="github" src="https://pbs.twimg.com/profile_images/1414990564408262661/r6YemvF9_400x400.jpg">
+              </a>
+            </div>
+          </section>
+
+          <section class="navegation_home">
+            <div class="navegation_home__flex">
+            <a href="{% url 'admin:index' %}" class="navegation_home_btn navegation_home_btn--admin">Go To Adimn Panel</a>
+            <a href="{% url 'company:company' %}" class="navegation_home_btn navegation_home_btn--company">Go To Company Panel</a>
+              </div>
+          </section> 
+
+    </body>
+</html>
