@@ -1,0 +1,159 @@
+:root {
+    --cor-fundo: #202530;
+    --cor-borda-card: white;
+    --cor-texto-default: white;
+    --font-family-default: "Roboto Mono", Sans-serif;
+}
+  
+body {
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto-default);
+  font-family: var(--font-family-default);
+}
+
+/* ==== Company and Deyail Style ==== */
+
+header {
+  margin: 40px min(10%,50px);
+}
+
+.title_page {
+  font-size: 34px;
+}
+
+.section_cards {
+  display: grid;
+  justify-items: center;
+}
+
+.cards {
+  width: min(90%, 2000px);
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+}
+
+.cards li {
+  display: block;
+}
+.cards {
+  margin: 0;
+  padding: 0;
+}
+
+.card {
+  display: flex;
+  height: 100px;
+  box-shadow: rgba(200, 200, 200, 0.55) 5px 5px 25px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.card:hover {
+  box-shadow: rgba(200, 200, 200, 0.95) 5px 5px 25px;
+  scale: 1.08;
+}
+
+.card_img {
+  aspect-ratio: 1/1;
+  background-color: white;
+}
+
+.card_title {
+  margin: 0;
+}
+
+a.nostyle:link {
+  text-decoration: inherit;
+  color: inherit;
+}
+
+a.nostyle:visited {
+  text-decoration: inherit;
+  color: inherit;
+}
+
+.card_textarea {
+  display: flex;
+  flex-direction: column;
+  margin: auto 1em;
+  color: var(--cor-texto-default);
+  text-decoration: none;
+}
+
+.card_date {
+  margin: 0;
+}
+
+.fail_text {
+    color: #f25c5c
+}
+
+
+/* ==== Home Style ==== */
+.about {
+  display: grid;
+  justify-items: center;
+}
+
+.titulo_projeto {
+  font-size: 34px;
+}
+
+.about_img_perfil {
+  border-radius: 50%;
+  width: min(90%, 400px);
+  border: 2px #a6ddd9 solid;
+  box-shadow: rgba(200, 200, 200, 0.45) 5px 5px 25px;
+  filter: contrast(120%);
+}
+
+.about h4 {
+  margin-top: 40px;
+  margin-bottom: 0px;
+}
+
+.list_contato {
+  display: flex;
+  gap: 30px;
+}
+
+.linkedin {
+  width: 30px;
+  border-radius: 15%;
+}
+
+.github {
+  width: 30px;
+  border-radius: 15%;
+}
+
+.navegation_home {
+  display: grid;
+  justify-items: center;
+  margin-top: 30px;
+}
+
+.navegation_home__flex {
+  display: flex;
+  gap: 10px;
+}
+
+.navegation_home_btn {
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  text-decoration: inherit;
+  color: inherit;
+  width: 200px;
+  height: 70px;
+  border-radius: 10px;
+}
+
+.navegation_home_btn--admin {
+  background-color: #bc9322;
+}
+
+.navegation_home_btn--company {
+  background-color: #4444F4;
+}

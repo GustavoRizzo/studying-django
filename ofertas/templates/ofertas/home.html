@@ -1,1 +1,32 @@
-<h1> Olá, eu sou o templete home do App de Ofertas!</h1>
+<html>
+    <head>
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'company/style.css' %}">
+    </head>
+    <body>
+        <header>
+            <h1 class="title_page">Listagem de Ofertas</h1>
+            <h2>Selecione uma para ir até a loja</h2>
+        </header>
+
+        <div class="section_cards">
+            {% if ofertas_list %}
+                <ul class="cards">
+                {% for company in ofertas_list %}
+                    <li>
+                        <div class="card">
+                            <img class="card_img" src="{{ company.url_img }}" alt="logo">
+                            <div class="card_textarea">
+                                <h2 class="card_title">{{ company.name }}</h2>
+                            </div>                              
+                        </div>
+                    </li>
+                {% endfor %}
+                </ul>
+            {% else %}
+                <h2 class="fail_text">Nenhuma empresa foi encontrada</h2>
+            {% endif %}
+        </div>
+
+    </body>
+</html>
