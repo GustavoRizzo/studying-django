@@ -22,5 +22,6 @@ urlpatterns = [
     path('polls/', include('polls.urls')),
     path('', include('company.urls')),
     path('ofertas/', include('ofertas.urls')),
+    path('api/', include('api.urls')),
     path('__debug__/', include('debug_toolbar.urls')),
 ]

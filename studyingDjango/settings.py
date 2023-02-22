@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'polls.apps.PollsConfig',
     'company.apps.CompanyConfig',
     'ofertas.apps.OfertasConfig',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
