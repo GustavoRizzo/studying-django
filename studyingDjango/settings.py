@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'company.apps.CompanyConfig',
     'ofertas.apps.OfertasConfig',
     'rest_framework',
+    'drf_yasg',
 ]
 
 MIDDLEWARE = [

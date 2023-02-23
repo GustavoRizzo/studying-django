@@ -9,6 +9,7 @@ django-debug-toolbar = "3.8.1"
 psycopg2 = "*"
 python-decouple = "*"
 djangorestframework = "*"
+drf-yasg = "*"
 
 [dev-packages]
 
